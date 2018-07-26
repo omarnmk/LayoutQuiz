@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pic"
+    tools:context=".MainActivity">
+
+    <!-- Container for all views in center -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <!-- First row  -->
+        <LinearLayout
+            android:id="@+id/linearLayout_emailaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/email_image"
+                style="@style/LogInImages"
+                android:src="@drawable/ic_at"
+                />
+
+            <EditText
+                android:id="@+id/email_editText"
+                style="@style/editText"
+                android:layout_width="250dp"
+                android:hint="Email address"
+                android:inputType="textEmailAddress"/>
+
+        </LinearLayout>
+
+        <!-- Second row  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <!-- Password views  -->
+            <LinearLayout
+                android:id="@+id/linearLayout_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/password_image"
+                    style="@style/LogInImages"
+                    android:src="@drawable/ic_key" />
+
+                <EditText
+                    android:id="@+id/password_editText"
+                    style="@style/editText"
+                    android:layout_width="95dp"
+                    android:hint="Password"
+                    android:inputType="textWebPassword"/>
+
+            </LinearLayout>
+
+            <!-- Again views -->
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/again_image"
+                    style="@style/LogInImages"
+                    android:src="@drawable/ic_lock"
+                    />
+
+                <EditText
+                    android:id="@+id/again"
+                    style="@style/editText"
+                    android:layout_width="95dp"
+                    android:hint="Again"
+                    android:inputType="textWebPassword" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Third row  -->
+        <EditText
+            android:id="@+id/mobile_number_editText"
+            style="@style/editText"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.6"
+            android:hint="Mobile Number"
+            android:inputType="phone"/>
+
+        <!-- Fourth row  -->
+        <Button
+            android:id="@+id/continue_button"
+            style="@style/editText"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Continue"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signin_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="Already have an account? Sign in"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"/>
+
+</RelativeLayout>
